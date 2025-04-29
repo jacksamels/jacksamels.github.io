@@ -33,7 +33,7 @@ body {
     radial-gradient(circle at 25% 75%, rgba(250, 250, 210, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 85% 85%, rgba(144, 238, 144, 0.3) 0%, transparent 60%),
     linear-gradient(135deg, #fdfbe7 0%, #e4fdfd 100%);
-  background-blend-mode: screen;
+  background-blend-mode: multiply;
   background-size: 300% 300%;
   animation: moveGradient 40s cubic-bezier(0.6, 0, 0.4, 1) infinite alternate;
 }
