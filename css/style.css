@@ -25,16 +25,14 @@ body {
   height: 100%;
   z-index: -1;
 
-  background:
-    radial-gradient(circle at 15% 25%, rgba(228, 146, 128, 0.35) 0%, transparent 50%),   /* Verde */
-    radial-gradient(circle at 80% 20%, rgba(230, 136, 155, 0.3) 0%, transparent 60%),    /* Furious Frog */
-    radial-gradient(circle at 50% 85%, rgba(210, 148, 80, 0.3) 0%, transparent 60%),     /* Lavish Spending */
-    radial-gradient(circle at 30% 75%, rgba(190, 152, 49, 0.3) 0%, transparent 60%),     /* Vivid Blue */
-    radial-gradient(circle at 70% 60%, rgba(147, 103, 111, 0.3) 0%, transparent 50%),    /* Muddy Yellow */
-    radial-gradient(circle at 40% 30%, rgba(179, 163, 106, 0.3) 0%, transparent 60%),    /* Sky Dancer */
-    linear-gradient(135deg, #e6889b 0%, #b3a36a 100%); /* soft blend from pink to muted yellow */
-
-  background-blend-mode: screen;
+background:
+  radial-gradient(circle at 15% 25%, rgba(228, 146, 128, 0.5) 0%, transparent 50%),
+  radial-gradient(circle at 80% 20%, rgba(230, 136, 155, 0.45) 0%, transparent 60%),
+  radial-gradient(circle at 50% 85%, rgba(210, 148, 80, 0.4) 0%, transparent 60%),
+  radial-gradient(circle at 30% 75%, rgba(190, 152, 49, 0.5) 0%, transparent 60%),
+  radial-gradient(circle at 40% 30%, rgba(179, 163, 106, 0.5) 0%, transparent 60%),
+  linear-gradient(135deg, #f5e2da 0%, #e1efd4 100%);
+background-blend-mode: soft-light;
 ;
   background-size: 300% 300%;
   animation: moveGradient 20s cubic-bezier(0.6, 0, 0.4, 1) infinite alternate;
