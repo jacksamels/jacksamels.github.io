@@ -47,8 +47,9 @@ background-blend-mode: soft-light;
 }
 
 .layout-container {
+.layout-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start; 
   justify-content: center;
   height: 100vh;
   padding: 40px;
