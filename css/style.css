@@ -34,7 +34,7 @@ body {
     radial-gradient(circle at 40% 30%, rgba(179, 163, 106, 0.3) 0%, transparent 60%),    /* Sky Dancer */
     linear-gradient(135deg, #e6889b 0%, #b3a36a 100%); /* soft blend from pink to muted yellow */
 
-  background-blend-mode: multiply
+  background-blend-mode: screen;
 ;
   background-size: 300% 300%;
   animation: moveGradient 20s cubic-bezier(0.6, 0, 0.4, 1) infinite alternate;
