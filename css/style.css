@@ -5,22 +5,16 @@
   font-style: normal;
 }
 
-/* Global Styles */
 body {
-  background-color: #f3f7ef;
   margin: 0;
   padding: 0;
   font-family: 'Pitch', Helvetica, Arial, sans-serif;
   color: #333;
   height: 100vh;
-  min-height: 100vh;
-  position: relative;
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
-/* Gradient Background */
 .gradient-bg {
   position: fixed;
   top: 0;
@@ -28,54 +22,47 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-
   background:
-    radial-gradient(circle at 15% 20%, rgba(255, 255, 153, 0.4) 0%, transparent 50%),  /* soft yellow */
-    radial-gradient(circle at 80% 15%, rgba(173, 255, 47, 0.3) 0%, transparent 60%),   /* chartreuse */
-    radial-gradient(circle at 50% 80%, rgba(135, 206, 250, 0.35) 0%, transparent 50%), /* sky blue */
-    radial-gradient(circle at 70% 60%, rgba(255, 239, 184, 0.3) 0%, transparent 50%),  /* warm pastel yellow */
-    radial-gradient(circle at 40% 30%, rgba(204, 255, 204, 0.25) 0%, transparent 60%), /* minty green */
-    radial-gradient(circle at 25% 75%, rgba(250, 250, 210, 0.3) 0%, transparent 50%),  /* light goldenrod */
-    radial-gradient(circle at 85% 85%, rgba(144, 238, 144, 0.3) 0%, transparent 60%),  /* light green */
-    linear-gradient(135deg, #fdfbe7 0%, #e4fdfd 100%); /* pale yellow to mint base */
-
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 153, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 80% 15%, rgba(173, 255, 47, 0.3) 0%, transparent 60%),
+    radial-gradient(circle at 50% 80%, rgba(135, 206, 250, 0.35) 0%, transparent 50%),
+    radial-gradient(circle at 70% 60%, rgba(255, 239, 184, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 30%, rgba(204, 255, 204, 0.25) 0%, transparent 60%),
+    radial-gradient(circle at 25% 75%, rgba(250, 250, 210, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 85% 85%, rgba(144, 238, 144, 0.3) 0%, transparent 60%),
+    linear-gradient(135deg, #fdfbe7 0%, #e4fdfd 100%);
   background-blend-mode: screen;
   background-size: 300% 300%;
   animation: moveGradient 40s cubic-bezier(0.6, 0, 0.4, 1) infinite alternate;
 }
 
 @keyframes moveGradient {
-  0%   { background-position: 0% 50%; }
-  25%  { background-position: 50% 40%; }
-  50%  { background-position: 100% 50%; }
-  75%  { background-position: 50% 60%; }
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 40%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 60%; }
   100% { background-position: 0% 50%; }
 }
-/* Layout */
-body > div.top-left,
-body > main.center-text {
-  display: block;
-}
 
-body {
-  display: grid;
-  grid-template-columns: minmax(180px, 240px) 1fr;
-  gap: 60px;
+.layout-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   padding: 40px;
-  align-items: start;
+  gap: 80px;
 }
 
-/* Top Left */
 .top-left {
   font-size: 14px;
   line-height: 1.6;
+  flex-shrink: 0;
 }
 
 .top-left p {
   margin-top: 20px;
 }
 
-/* Center Text */
 .center-text {
   font-size: 15px;
   line-height: 1.6;
@@ -90,7 +77,6 @@ body {
   margin-bottom: 12px;
 }
 
-/* Links */
 a {
   text-decoration: none;
   color: #333;
@@ -100,22 +86,19 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
-  body {
-    grid-template-columns: 1fr;
+  .layout-container {
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
+    gap: 40px;
   }
-  
+
   .top-left, .center-text {
     text-align: center;
   }
 
-  .top-left p {
-    margin-top: 10px;
-  }
-
   .center-text {
-    margin-top: 40px;
+    margin-top: 20px;
   }
 }
