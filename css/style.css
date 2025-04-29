@@ -37,7 +37,7 @@ body {
   background-blend-mode: multiply
 ;
   background-size: 300% 300%;
-  animation: moveGradient 40s cubic-bezier(0.6, 0, 0.4, 1) infinite alternate;
+  animation: moveGradient 20s cubic-bezier(0.6, 0, 0.4, 1) infinite alternate;
 }
 
 @keyframes moveGradient {
