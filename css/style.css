@@ -75,14 +75,14 @@ body {
 
 .center-text {
   position: absolute;
-  top: 20px; /* Aligns with .top-left’s top: 20px */
-  left: 240px; /* Adjust as needed to give some space from the left menu */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: left;
   max-width: 500px;
   padding: 20px;
   font-size: 15px;
   line-height: 1.6;
-
 }
 
 .social-right {
