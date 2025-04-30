@@ -12,7 +12,7 @@ html {
 
 @font-face {
   font-family: 'Pitch';
-  src: url('../fonts/Pitch-Medium.woff2') format('woff2');
+  src: url('fonts/Pitch-Medium.otf') format('otf');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -20,11 +20,7 @@ html {
 
 body {
   font-family: 'Pitch', sans-serif;
-  background-color: var(--bg);
-  color: var(--fg);
-  margin: 0;
-  padding: 4rem;
-  transition: background-color 0.4s ease, color 0.4s ease;
+}
 }
 
 .grid {
