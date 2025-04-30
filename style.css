@@ -1,26 +1,27 @@
-html {
-  --bg: #fdfaf6;
-  --fg: #1a1a1a;
-  --border: #d8d5cd;
-  --link: var(--fg);
-}
-
-html {
-  transition: background-color 0.4s ease, color 0.4s ease;
-  scroll-behavior: smooth;
-}
-
 @font-face {
   font-family: 'Pitch';
-  src: url('fonts/Pitch-Medium.otf') format('otf');
+  src: url('fonts/Pitch-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
+html {
+  --bg: #fdfaf6;
+  --fg: #1a1a1a;
+  --border: #d8d5cd;
+  --link: var(--fg);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Pitch', sans-serif;
-}
+  background-color: var(--bg);
+  color: var(--fg);
+  margin: 0;
+  padding: 4rem;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .grid {
