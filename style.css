@@ -1,9 +1,28 @@
+@font-face {
+  font-family: 'Pitch';
+  src: url('fonts/Pitch-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-size: 80%;
+  --bg: #E0D8CF;
+  --fg: #1a1a1a;
+  --border: #d8d5cd;
+  --link: var(--fg);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: sans-serif;
-  background: #f4f4f4;
-  color: #222;
-  padding: 2rem;
+  font-family: 'Pitch', sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
   margin: 0;
+  padding: 3rem;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .grid {
@@ -12,10 +31,65 @@ body {
   gap: 3rem;
 }
 
+.grid p {
+  margin: 0 0 1.5rem 0;
+  text-indent: 0;
+  white-space: normal;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  white-space: normal;
+  word-break: break-word;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  display: inline;
+  position: relative;
+  transition: color 0.3s ease;
+  word-break: break-word;
+  border-bottom: 1px solid white;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(135deg, #00c3ff, #a67dfb, #ff6ec4, #ff7900);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+a:hover {
+  border-bottom: none;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
+
 .section-divider {
   width: 100%;
   border: none;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--border);
   margin: 4rem 0 2rem;
 }
 
@@ -35,15 +109,38 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 1;
 }
 
-.slide img { animation-delay: 0s; }
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-@keyframes fade {
-  0%, 100% { opacity: 0; }
-  10%, 40% { opacity: 1; }
+  .slideshow-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 2rem 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .slideshow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  p,
+  a {
+    font-size: 1rem;
+  }
 }
