@@ -10,8 +10,16 @@ html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: 'Pitch';
+  src: url('../fonts/Pitch-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Pitch', sans-serif;
   background-color: var(--bg);
   color: var(--fg);
   margin: 0;
