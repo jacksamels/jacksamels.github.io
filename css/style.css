@@ -8,97 +8,41 @@
 }
 
 body {
+  font-family: 'Pitch';
+  background-color: #ffffff;
+  color: #000000;
   margin: 0;
-  padding: 0;
-  font-family: 'Pitch', Helvetica, Arial, sans-serif;
-  color: #333;
-  height: 100vh;
-  overflow-x: hidden;
-  position: relative;
+  padding: 4rem;
 }
-
-
-.gradient-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-
-  background: linear-gradient(90deg,
-    #9bd5a0 0%,      /* green */
-    #adc653 50%,     /* lime/chartreuse */
-    #caa418 100%     /* golden yellow */
-  );
-
-  background-size: 200% 200%;
-  animation: moveGradient 30s ease-in-out infinite alternate;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
 }
-
-@keyframes moveGradient {
-  0% { background-position: 0% 50%; }
-  25% { background-position: 50% 40%; }
-  50% { background-position: 100% 50%; }
-  75% { background-position: 50% 60%; }
-  100% { background-position: 0% 50%; }
+h2 {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
 }
-
-.layout-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  padding: 40px;
-  gap: 80px;
-}
-
-.top-left {
-  font-size: 14px;
+p {
+  font-size: 0.875rem;
   line-height: 1.6;
-  flex-shrink: 0;
+  white-space: pre-wrap;
 }
-
-.top-left p {
-  margin-top: 20px;
-}
-
-.center-text {
-  font-size: 15px;
-  line-height: 1.6;
-  max-width: 600px;
-}
-
-.center-text ul {
-  padding-left: 20px;
-}
-
-.center-text li {
-  margin-bottom: 12px;
-}
-
 a {
-  text-decoration: none;
-  color: #333;
-}
-
-a:hover {
+  color: inherit;
   text-decoration: underline;
 }
-
-@media (max-width: 768px) {
-  .layout-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    gap: 40px;
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-
-  .top-left, .center-text {
-    text-align: center;
+}
+@media (max-width: 600px) {
+  body {
+    padding: 2rem;
   }
-
-  .center-text {
-    margin-top: 20px;
+  .grid {
+    grid-template-columns: 1fr;
   }
 }
