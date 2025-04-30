@@ -1,3 +1,4 @@
+
 html {
   --bg: #fdfaf6;
   --fg: #1a1a1a;
@@ -5,9 +6,12 @@ html {
   --link: var(--fg);
 }
 
+
 html {
-  transition: background-color 0.4s ease, color 0.4s ease;
-  scroll-behavior: smooth;
+  --bg: #fdfaf6;
+  --fg: #1a1a1a;
+  --border: #d8d5cd;
+  --link: var(--fg);
 }
 
 body {
@@ -25,11 +29,6 @@ body {
   gap: 3rem;
 }
 
-.grid p {
-  margin: 0 0 1.5rem 0;
-  text-indent: 0;
-}
-
 h2 {
   text-transform: uppercase;
   font-size: 0.875rem;
@@ -40,7 +39,7 @@ h2 {
 p {
   font-size: 0.9rem;
   line-height: 1.6;
-  white-space: normal;
+  white-space: pre-wrap;
   word-break: break-word;
   margin-bottom: 1rem;
 }
@@ -52,7 +51,6 @@ a {
   position: relative;
   transition: color 0.3s ease;
   word-break: break-word;
-  border-bottom: 1px dotted #dad7d0;
 }
 
 a::after {
@@ -71,12 +69,34 @@ a::after {
   pointer-events: none;
 }
 
-a:hover {
-  border-bottom: none;
+/* Always-visible base underline */
+a {
+  border-bottom: 1px dotted #dad7d0;
 }
 
 a:hover::after {
   transform: scaleX(1);
+}
+a:hover {
+  color: var(--fg);
+}
+
+button {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  color: var(--fg);
+  border: 1px solid var(--fg);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.875rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+button:hover {
+  background-color: var(--fg);
+  color: var(--bg);
 }
 
 @media (max-width: 1024px) {
@@ -89,18 +109,87 @@ a:hover::after {
   body {
     padding: 2rem 1.5rem;
   }
-
   .grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-
   h2 {
     font-size: 1rem;
   }
+  p, a {
+  color: var(--link);
+  text-decoration: none;
+  display: inline;
+  position: relative;
+  transition: color 0.3s ease;
+  word-break: break-word;
+}
 
-  p,
-  a {
-    font-size: 1rem;
-  }
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(135deg, #00c3ff, #a67dfb, #ff6ec4, #ff7900);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+/* Always-visible base underline */
+a {
+  border-bottom: 1px dotted #dad7d0;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
+}
+
+
+.grid p {
+  margin: 0 0 1.5rem 0;
+  text-indent: 0;
+}
+
+a:hover {
+  border-bottom: none;
+}
+
+.grid ul {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.grid li {
+  margin-bottom: 0.5rem;
+}
+
+
+.project {
+  position: relative;
+}
+
+.preview-thumb {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  margin-top: 0.5rem;
+  border: 1px solid var(--border);
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.project:hover .preview-thumb {
+  display: block;
 }
