@@ -38,12 +38,10 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
-  animation: fade 6s infinite;
+  opacity: 1;
 }
 
-.slide img:nth-child(1) { animation-delay: 0s; }
-.slide img:nth-child(2) { animation-delay: 3s; }
+.slide img { animation-delay: 0s; }
 
 @keyframes fade {
   0%, 100% { opacity: 0; }
