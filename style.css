@@ -86,38 +86,9 @@ a:hover::after {
   transform: scaleX(1);
 }
 
-.section-divider {
-  width: 100%;
-  border: none;
-  border-top: 1px solid var(--border);
-  margin: 4rem 0 2rem;
-}
-
-.slideshow-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.slide {
-  position: relative;
-  overflow: hidden;
-}
-
-.slide img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .slideshow-grid {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -129,10 +100,6 @@ a:hover::after {
   .grid {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-
-  .slideshow-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   h2 {
