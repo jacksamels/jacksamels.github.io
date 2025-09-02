@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portrait Series - Jack Samels</title>
+  <meta name="description" content="Portrait Series project by Jack Samels - exploring human connection through intimate photography." />
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .back-nav {
+      margin-bottom: 3rem;
+    }
+
+    .back-link {
+      color: var(--link);
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .back-link:hover {
+      border-bottom: 1px solid var(--fg);
+    }
+
+    .project-header {
+      margin-bottom: 4rem;
+    }
+
+    .project-title {
+      font-size: 2.5rem;
+      margin: 0 0 1rem 0;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+    }
+
+    .project-subtitle {
+      font-size: 1.1rem;
+      color: rgba(26, 26, 26, 0.7);
+      margin: 0 0 2rem 0;
+      max-width: 600px;
+    }
+
+    .project-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .meta-item h3 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0 0 0.5rem 0;
+      color: rgba(26, 26, 26, 0.6);
+    }
+
+    .meta-item p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 60vh;
+      object-fit: cover;
+      margin-bottom: 4rem;
+    }
+
+    .content-section {
+      margin-bottom: 4rem;
+    }
+
+    .content-section h2 {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0 0 1.5rem 0;
+      font-weight: 500;
+    }
+
+    .content-section p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      max-width: 700px;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+    }
+
+    .full-width-image {
+      width: 100%;
+      height: auto;
+      margin: 3rem 0;
+    }
+
+    .two-column-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin: 3rem 0;
+    }
+
+    .process-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .process-list li {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    .process-list li:last-child {
+      border-bottom: none;
+    }
+
+    .process-list strong {
+      display: block;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+      color: rgba(26, 26, 26, 0.7);
+    }
+
+    .next-project {
+      margin-top: 6rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .next-project-link {
+      color: var(--link);
+      text-decoration: none;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: inline-block;
+      padding: 1rem 2rem;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    .next-project-link:hover {
+      background-color: var(--fg);
+      color: var(--bg);
+    }
+
+    @media (max-width: 768px) {
+      .project-title {
+        font-size: 2rem;
+      }
+
+      .project-meta {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .hero-image {
+        height: 50vh;
+      }
+
+      .image-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .two-column-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .next-project-link {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="back-nav">
+      <a href="../../index.html" class="back-link">← Back to Home</a>
+    </nav>
+
+    <header class="project-header">
+      <h1 class="project-title">Portrait Series</h1>
+      <p class="project-subtitle">
+        An intimate exploration of human connection through carefully crafted portraits that reveal the authentic stories behind each subject.
+      </p>
+
+      <div class="project-meta">
+        <div class="meta-item">
+          <h3>Role</h3>
+          <p>Photographer<br>Creative Director</p>
+        </div>
+        <div class="meta-item">
+          <h3>Year</h3>
+          <p>2024</p>
+        </div>
+        <div class="meta-item">
+          <h3>Medium</h3>
+          <p>Photography</p>
+        </div>
+        <div class="meta-item">
+          <h3>Tools</h3>
+          <p>Canon 5D Mark IV<br>Photoshop<br>Lightroom</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=1200&h=800&fit=crop" alt="Portrait Series Hero" class="hero-image">
+
+      <section class="content-section">
+        <h2>Project Overview</h2>
+        <p>
+          This portrait series emerged from a desire to capture the unguarded moments of human expression. Working with subjects from diverse backgrounds, I focused on creating an environment where authentic emotion could surface naturally.
+        </p>
+        <p>
+          Each portrait was carefully composed to balance intimate storytelling with visual impact, using natural light and minimal post-processing to preserve the raw honesty of each moment.
+        </p>
+      </section>
+
+      <div class="image-grid">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop" alt="Portrait 1">
+        <img src="https://images.unsplash.com/photo-1494790108755-2616c0763c1e?w=400&h=500&fit=crop" alt="Portrait 2">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop" alt="Portrait 3">
+      </div>
+
+      <div class="two-column-grid">
+        <section class="content-section">
+          <h2>Creative Process</h2>
+          <p>
+            The approach centered on building genuine connections with each subject before the camera was ever introduced. This foundation of trust allowed for the vulnerable, authentic moments that define this series.
+          </p>
+          <p>
+            Technical execution was deliberately minimal—available light, simple compositions, and post-processing that enhanced rather than altered the emotional truth of each image.
+          </p>
+        </section>
+
+        <div>
+          <h2>Process Steps</h2>
+          <ul class="process-list">
+            <li>
+              <strong>Research & Casting</strong>
+              Identifying subjects with compelling stories and diverse perspectives
+            </li>
+            <li>
+              <strong>Pre-shoot Conversations</strong>
+              Building trust and understanding each person's unique narrative
+            </li>
+            <li>
+              <strong>Environment Setup</strong>
+              Creating comfortable, natural lighting conditions
+            </li>
+            <li>
+              <strong>Capture Sessions</strong>
+              Extended shooting periods allowing for natural moments to emerge
+            </li>
+            <li>
+              <strong>Post-Processing</strong>
+              Minimal editing to preserve authentic emotion and skin texture
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1200&h=600&fit=crop" alt="Behind the scenes" class="full-width-image">
+
+      <section class="content-section">
+        <h2>Results & Impact</h2>
+        <p>
+          The series was featured in several photography publications and exhibited at local galleries. More importantly, it sparked conversations about representation and the power of authentic storytelling in visual media.
+        </p>
+        <p>
+          Each portrait became a collaboration between photographer and subject, resulting in images that feel both intimate and universal—capturing specific human moments that speak to broader shared experiences.
+        </p>
+      </section>
+
+      <nav class="next-project">
+        <a href="../art-direction/etsy-brand-campaign.html" class="next-project-link">
+          Next Project: Etsy Brand Campaign
+        </a>
+      </nav>
+    </main>
+  </div>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
