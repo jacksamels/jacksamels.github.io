@@ -158,7 +158,7 @@ a:hover::after {
 .filter-btn:hover,
 .filter-btn.active {
   background-color: var(--fg);
-  color: var(--bg);
+  color: white;
 }
 
 .projects-grid {
