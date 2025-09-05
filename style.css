@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Pitch';
-  src: url('fonts/Pitch-Medium.otf') format('opentype');
+  font-family: 'Jokker';
+  src: url('FONTS/Jokker-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  font-family: 'Pitch', sans-serif;
+  font-family: 'Jokker', sans-serif;
   background-color: var(--bg);
   color: var(--fg);
   margin: 0;
@@ -147,7 +147,7 @@ a:hover::after {
   border: 1px solid var(--border);
   color: var(--fg);
   padding: 0.5rem 1rem;
-  font-family: 'Pitch', sans-serif;
+  font-family: 'Jokker', sans-serif;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
